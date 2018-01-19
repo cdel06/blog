@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block head_title %}Simplon Application{% endblock %}</title>
+    </head>
+
+    <!-- Latest compiled and minified CSS-->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jupyter.css' %}" rel="stylesheet">
+
+
+    {# MEDIUM STYLE EDITOR#}
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    {# Custom CSS#}
+
+    <link href="{% static 'css/grayscale.css' %}" rel="stylesheet">
+
+    {# Fonts#}
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+
+    <body id="page-top">
+
+
+        <!--<h1>{% block title %}Welcome to my block{% endblock %}</h1>-->
+        {% block content %}
+
+        {% endblock %}
+
+        <footer>
+          <div class="container text-center">
+            <p>2018</p>
+          </div>
+        </footer>
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+
+        <!-- Custom scripts for this template -->
+        <script src="{% static 'js/grayscale.js' %}"></script>
+        </body>
+        </html>
+    </body>
+</html>
